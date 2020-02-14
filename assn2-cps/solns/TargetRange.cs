@@ -8,7 +8,25 @@ namespace assn2_cps.solns
     {
         public static int[] TargetRangeSoln(int[] l1, int target)
         {
-            throw new NotImplementedException();
+            int first=-1, final=-1;
+            int counter = 0;
+            for (int i=0; i < l1.Length; i++)
+            {
+                if (counter == 0 && l1[i] == target)
+                {
+                    first = i;
+                    counter++ ;
+                    continue;
+                }
+                if (counter >= 1 && l1[i] == target)
+                {
+                    final = i;
+                    counter++;
+                }
+            }
+            int[] result = { first, final };
+            return result;
+            //throw new NotImplementedException();
         }
     }
 }
