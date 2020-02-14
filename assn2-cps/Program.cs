@@ -15,8 +15,8 @@ namespace assn2_cps
             Console.WriteLine("[" + r[0] + "," + r[1]+"]");
 
             Console.WriteLine("Question 2");
-            string s = "University of South Florida";
-            string rs = StringReverse.StringReverseSoln(s);
+            String s = "University of South Florida";
+            String rs = StringReverse.StringReverseSoln(s);
             Console.WriteLine(rs);
 
             Console.WriteLine("Question 3");
@@ -30,15 +30,17 @@ namespace assn2_cps
             Console.WriteLine(sortedString);
 
             Console.WriteLine("Question 5-Part 1");
-            int[] nums1 = { 1, 2, 2, 1 };
+            int[] nums1 = { 1, 1, 2, 2, 2 };
             int[] nums2 = { 2, 2 };
+            //int[] nums1 = { 3, 6, 6, 3};
+            //int[] nums2 = { 6, 3, 6, 7, 3 };
             int[] intersect1 = Intersect.Intersect1(nums1, nums2);
             Console.WriteLine("Part 1- Intersection of two arrays is: ");
             Intersect.DisplayArray(intersect1); Console.WriteLine("\n");
             Console.WriteLine("Question 5-Part 2");
             int[] intersect2 = Intersect.Intersect2(nums1, nums2);
             Console.WriteLine("Part 2- Intersection of two arrays is: ");
-            Intersect.DisplayArray(intersect2); 
+            Intersect.DisplayArray(intersect2);
             Console.WriteLine("\n");
 
             Console.WriteLine("Question 6");
