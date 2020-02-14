@@ -10,9 +10,9 @@ namespace assn2_cps
             Console.WriteLine("Question 1");
             int[] l1 = new int[] { 5, 6, 6, 9, 9, 12 };
             int target = 9;
-            int[] r =  TargetRange.TargetRangeSoln(l1, target);
+            int[] r = TargetRange.TargetRangeSoln(l1, target);
             // Write your code to print range r here 
-            Console.WriteLine("[" + r[0] + "," + r[1]+"]");
+            Console.WriteLine("[" + r[0] + "," + r[1] + "]");
 
             Console.WriteLine("Question 2");
             string s = "University of South Florida";
@@ -38,7 +38,7 @@ namespace assn2_cps
             Console.WriteLine("Question 5-Part 2");
             int[] intersect2 = Intersect.Intersect2(nums1, nums2);
             Console.WriteLine("Part 2- Intersection of two arrays is: ");
-            Intersect.DisplayArray(intersect2); 
+            Intersect.DisplayArray(intersect2);
             Console.WriteLine("\n");
 
             Console.WriteLine("Question 6");
