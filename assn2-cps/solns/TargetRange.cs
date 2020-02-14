@@ -15,6 +15,7 @@ namespace assn2_cps.solns
                 if (counter == 0 && l1[i] == target)
                 {
                     first = i;
+                    final = i;
                     counter++ ;
                     continue;
                 }
