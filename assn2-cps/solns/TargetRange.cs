@@ -21,7 +21,6 @@ namespace assn2_cps.solns
                 if (counter >= 1 && l1[i] == target)
                 {
                     final = i;
-                    counter++;
                 }
             }
             int[] result = { first, final };

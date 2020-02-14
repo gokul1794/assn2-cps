@@ -9,7 +9,7 @@ namespace assn2_cps
         {
             Console.WriteLine("Question 1");
             int[] l1 = new int[] { 5, 6, 6, 9, 9, 12 };
-            int target = 9;
+            int target = 5;
             int[] r =  TargetRange.TargetRangeSoln(l1, target);
             // Write your code to print range r here 
             Console.WriteLine("[" + r[0] + "," + r[1]+"]");
