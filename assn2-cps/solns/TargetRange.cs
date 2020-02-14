@@ -26,7 +26,6 @@ namespace assn2_cps.solns
             }
             int[] result = { first, final };
             return result;
-            //throw new NotImplementedException();
         }
     }
 }
