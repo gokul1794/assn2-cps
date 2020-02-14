@@ -18,15 +18,13 @@ namespace assn2_cps.solns
                     counter++ ;
                     continue;
                 }
-                if (counter >= 1 && l1[i] == target)
+                if (counter > 0 && l1[i] == target)
                 {
                     final = i;
-                    counter++;
                 }
             }
             int[] result = { first, final };
             return result;
-            //throw new NotImplementedException();
         }
     }
 }
