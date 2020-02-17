@@ -25,7 +25,7 @@ namespace assn2_cps
             Console.WriteLine(sum);
 
             Console.WriteLine("Question 4");
-            string s2 = "Dell";
+            string s2 = "DelleeE";
             string sortedString = FreqSort.FreqSortSoln(s2);
             Console.WriteLine(sortedString);
 
@@ -48,7 +48,7 @@ namespace assn2_cps
             int k = 3; Console.WriteLine(ContainsDuplicate.ContainsDuplicateSoln(arr, k));
 
             Console.WriteLine("Question 7");
-            int rodLength = 4;
+            int rodLength = 15;
             int priceProduct = GoldRod.GoldRodSoln(rodLength);
             Console.WriteLine(priceProduct);
 

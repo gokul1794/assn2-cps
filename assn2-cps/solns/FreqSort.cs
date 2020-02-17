@@ -16,16 +16,20 @@ namespace assn2_cps.solns
             {
                 if (keyValue.ContainsKey(s2[i]))
                 {
+                    //increase value in keyValue dictionary by +1
                     keyValue[s2[i]] = ++keyValue[s2[i]];
                 }
                 else
                 {
+                    //add char to dictionary initiating count of value with 1
                     keyValue.Add(s2[i], 1);
                 }
             }
             foreach (var item in keyValue.OrderByDescending(key => key.Value))
             {
+                //multiply char by number of occurances(key.Value)
                 string temp = new string(item.Key, item.Value);
+                //add temp string to the list
                 sList.Add(temp);
             }
             string sortedString = string.Join("", sList);
