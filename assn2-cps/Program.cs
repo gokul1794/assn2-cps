@@ -7,7 +7,7 @@ namespace assn2_cps
     {
         static void Main(string[] args)
         {
-/*            Console.WriteLine("Question 1");
+            Console.WriteLine("Question 1");
             int[] l1 = new int[] { 5, 6, 6, 9, 9, 12 };
             int target = 9;
             int[] r = TargetRange.TargetRangeSoln(l1, target);
@@ -43,20 +43,20 @@ namespace assn2_cps
 
             Console.WriteLine("Question 6");
             char[] arr = new char[] { 'a', 'g', 'h', 'a' };
-            int k = 3; Console.WriteLine(ContainsDuplicate.ContainsDuplicateSoln(arr, k));*/
+            int k = 3; Console.WriteLine(ContainsDuplicate.ContainsDuplicateSoln(arr, k));
 
             Console.WriteLine("Question 7");
             int rodLength = 15;
             int priceProduct = GoldRod.GoldRodSoln(rodLength);
             Console.WriteLine(priceProduct);
 
-/*            Console.WriteLine("Question 8");
+            Console.WriteLine("Question 8");
             string[] userDict = new string[] { "rocky", "usf", "hello", "apple" };
             string keyword = "hhllo";
             Console.WriteLine(DictSearch.DictSearchSoln(userDict, keyword));
 
             Console.WriteLine("Question 9");
-            SolvePuzzle.SolvePuzzleSoln();*/
+            SolvePuzzle.SolvePuzzleSoln();
 
         }
     }
