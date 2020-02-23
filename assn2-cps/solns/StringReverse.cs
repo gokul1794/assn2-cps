@@ -8,9 +8,9 @@ namespace assn2_cps.solns
     {
         public static string StringReverseSoln(string s)
         {
+            char[] reverse = s.ToCharArray();
             try
             {
-                char[] reverse = s.ToCharArray();
                 int left = 0;
                 for (int i = 0; i < s.Length; i++)
                 {
@@ -32,12 +32,12 @@ namespace assn2_cps.solns
                         left = i + 1;
                     }
                 }
-                return new string(reverse);
             }
             catch(Exception e)
             {
-                return e.Message;
+                Console.WriteLine(e.Message);
             }
+            return new string(reverse);
         }
     }
 }
