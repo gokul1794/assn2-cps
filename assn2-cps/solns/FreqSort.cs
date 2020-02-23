@@ -12,27 +12,45 @@ namespace assn2_cps.solns
         {
             List<string> sList = new List<string>();
             Dictionary<char, int> keyValue = new Dictionary<char, int>();
-            for (int i = 0; i < s2.Length; i++)
+            string sortedString;
+            try
             {
-                if (keyValue.ContainsKey(s2[i]))
+                s2 = s2.Replace(" ", string.Empty);
+                if (s2.Length < 1)
                 {
-                    //increase value in keyValue dictionary by +1
-                    keyValue[s2[i]] = ++keyValue[s2[i]];
+                    //Error note in case s2 is empty
+                    sortedString = "Error: Ensure string \"s2\" contains characters.";
                 }
                 else
                 {
-                    //add char to dictionary initiating count of value with 1
-                    keyValue.Add(s2[i], 1);
+                    for (int i = 0; i < s2.Length; i++)
+                    {
+                        if (keyValue.ContainsKey(s2[i]))
+                        {
+                            //increase value in keyValue dictionary by +1
+                            keyValue[s2[i]] = ++keyValue[s2[i]];
+                        }
+                        else
+                        {
+                            //add char to dictionary initiating count of value with 1
+                            keyValue.Add(s2[i], 1);
+                        }
+                    }
+                    foreach (var item in keyValue.OrderByDescending(key => key.Value))
+                    {
+                        //multiply char by number of occurances(key.Value)
+                        string temp = new string(item.Key, item.Value);
+                        //add temp string to the list
+                        sList.Add(temp);
+                    }
+                    sortedString = string.Join("", sList);
                 }
             }
-            foreach (var item in keyValue.OrderByDescending(key => key.Value))
+            catch (Exception e)
             {
-                //multiply char by number of occurances(key.Value)
-                string temp = new string(item.Key, item.Value);
-                //add temp string to the list
-                sList.Add(temp);
+                //Error info, in case of any errors
+                sortedString = $"Error: {e.GetType().Name}";
             }
-            string sortedString = string.Join("", sList);
             return sortedString;
         }
     }

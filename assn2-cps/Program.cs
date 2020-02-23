@@ -20,12 +20,12 @@ namespace assn2_cps
             Console.WriteLine(rs);
 
             Console.WriteLine("Question 3");
-            int[] l2 = new int[] { 2, 2, 3, 5, 6 };
+            int[] l2 = new int[] { 2, 2, 2, 4, 5, 7 };
             int sum = MinimumSum.MinimumSumSoln(l2);
             Console.WriteLine(sum);
 
             Console.WriteLine("Question 4");
-            string s2 = "DelleeE";
+            string s2 = "Dell";
             string sortedString = FreqSort.FreqSortSoln(s2);
             Console.WriteLine(sortedString);
 
