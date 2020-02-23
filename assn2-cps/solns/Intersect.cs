@@ -24,9 +24,14 @@ namespace assn2_cps.solns
 
         public static void DisplayArray(int[] intersect1)
         {
+            if (intersect1.Length > 0)
             for(int i = 0; i < intersect1.Length; i++)
             {
                 Console.Write(intersect1[i] + " ");
+            }
+            else
+            {
+                Console.WriteLine("No Intersections found!");
             }
         }
 

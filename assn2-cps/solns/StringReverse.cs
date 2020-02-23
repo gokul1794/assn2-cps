@@ -8,29 +8,36 @@ namespace assn2_cps.solns
     {
         public static string StringReverseSoln(string s)
         {
-            char[] reverse = s.ToCharArray();
-            int left = 0;
-            for(int i = 0; i < s.Length; i++)
+            try
             {
-                if(s[i] == ' ' || i == s.Length-1)
+                char[] reverse = s.ToCharArray();
+                int left = 0;
+                for (int i = 0; i < s.Length; i++)
                 {
-                    int right;
-                    if (i == s.Length - 1)
-                        right = i;
-                    else
-                        right = i - 1;
-                    while (left < right)
+                    if (s[i] == ' ' || i == s.Length - 1)
                     {
-                        char temp = reverse[left];
-                        reverse[left] = reverse[right];
-                        reverse[right] = temp;
-                        left++;
-                        right--;
+                        int right;
+                        if (i == s.Length - 1)
+                            right = i;
+                        else
+                            right = i - 1;
+                        while (left < right)
+                        {
+                            char temp = reverse[left];
+                            reverse[left] = reverse[right];
+                            reverse[right] = temp;
+                            left++;
+                            right--;
+                        }
+                        left = i + 1;
                     }
-                    left = i + 1;
                 }
+                return new string(reverse);
             }
-            return new string(reverse);
+            catch(Exception e)
+            {
+                return e.Message;
+            }
         }
     }
 }

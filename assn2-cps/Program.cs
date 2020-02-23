@@ -32,16 +32,21 @@ namespace assn2_cps
             Console.WriteLine("Question 5-Part 1");
             int[] nums1 = { 1, 1, 2, 2, 2 };
             int[] nums2 = { 2, 2 };
-            //int[] nums1 = { 3, 6, 6, 3};
-            //int[] nums2 = { 6, 3, 6, 7, 3 };
-            int[] intersect1 = Intersect.Intersect1(nums1, nums2);
-            Console.WriteLine("Part 1- Intersection of two arrays is: ");
-            Intersect.DisplayArray(intersect1); Console.WriteLine("\n");
-            Console.WriteLine("Question 5-Part 2");
-            int[] intersect2 = Intersect.Intersect2(nums1, nums2);
-            Console.WriteLine("Part 2- Intersection of two arrays is: ");
-            Intersect.DisplayArray(intersect2);
-            Console.WriteLine("\n");
+            try
+            {
+                int[] intersect1 = Intersect.Intersect1(nums1, nums2);
+                Console.WriteLine("Part 1- Intersection of two arrays is: ");
+                Intersect.DisplayArray(intersect1); Console.WriteLine("\n");
+                Console.WriteLine("Question 5-Part 2");
+                int[] intersect2 = Intersect.Intersect2(nums1, nums2);
+                Console.WriteLine("Part 2- Intersection of two arrays is: ");
+                Intersect.DisplayArray(intersect2);
+                Console.WriteLine("\n");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.WriteLine("Question 6");
             char[] arr = new char[] { 'a', 'g', 'h', 'a' };
@@ -55,7 +60,17 @@ namespace assn2_cps
             Console.WriteLine("Question 8");
             string[] userDict = new string[] { "rocky", "usf", "hello", "apple" };
             string keyword = "hhllo";
-            Console.WriteLine(DictSearch.DictSearchSoln(userDict, keyword));
+            try
+            {
+                if (userDict.Length > 0)
+                    Console.WriteLine(DictSearch.DictSearchSoln(userDict, keyword));
+                else
+                    Console.WriteLine("Enter an array with at least one element.");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.WriteLine("Question 9");
             SolvePuzzle.SolvePuzzleSoln();
