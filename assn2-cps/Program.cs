@@ -22,7 +22,7 @@ namespace assn2_cps
             Console.WriteLine("Question 3");
             int[] l2 = new int[] { 2, 2, 2, 4, 5, 7 };
             int sum = MinimumSum.MinimumSumSoln(l2);
-            Console.WriteLine(sum);
+            Console.WriteLine("The Sum is:  " + sum);
 
             Console.WriteLine("Question 4");
             string s2 = "Dell";
