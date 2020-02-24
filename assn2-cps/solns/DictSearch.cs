@@ -6,6 +6,12 @@ namespace assn2_cps.solns
 {
     class DictSearch
     {
+        /// <summary>
+        /// Looks for a word in the dictionary and returns the word if the charachter is off by 1
+        /// </summary>
+        /// <param name="userDict">Dictionary of words</param>
+        /// <param name="keyword">Keyword to be checked</param>
+        /// <returns>True/False</returns>
         public static bool DictSearchSoln(string[] userDict, string keyword)
         {
             IDictionary<string, int> dict = new Dictionary<string, int>();
@@ -21,17 +27,20 @@ namespace assn2_cps.solns
                 string correctWord = userDict[0];
                 for (int i = 0; i < userDict.Length; i++)
                 {
+                    //Check all words with the same length
                     if (keyword.Length == userDict[i].Length)
                     {
                         string dictWord = userDict[i];
                         for (int j = 0; j < dictWord.Length; j++)
                         {
+                            //Compare word and keyword char and increase count of same chars
                             if (keyword[j] == dictWord[j])
                             {
                                 count+=1;
                                 correctWord = dictWord;
                             }
                         }
+                        //If word lengths match and if keyword is length -1 then word is found.
                         if (count == keyword.Length - 1)
                         {
                             Console.WriteLine(correctWord);
