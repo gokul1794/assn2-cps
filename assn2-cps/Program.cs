@@ -73,6 +73,8 @@ namespace assn2_cps
             }
 
             Console.WriteLine("Question 9");
+            Console.WriteLine(" ");
+            
             SolvePuzzle.SolvePuzzleSoln();
 
         }

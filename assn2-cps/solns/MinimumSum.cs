@@ -40,7 +40,7 @@ namespace assn2_cps.solns
 
                             //code below solves such a problem
 
-                            // traverses till there can not be anymore violation of sorting 
+                            // checks till there can not be anymore violation of sorting 
                             if (i < l2.Length - 2)
                             {
                                 //for repetative duplicates like (2,2,2....). 
