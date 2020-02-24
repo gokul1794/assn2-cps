@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using assn2_cps.solns;
 
 namespace assn2_cps
@@ -74,8 +75,14 @@ namespace assn2_cps
 
             Console.WriteLine("Question 9");
             Console.WriteLine(" ");
-            
-            SolvePuzzle.SolvePuzzleSoln();
+            try
+            {
+                SolvePuzzle.SolvePuzzleSoln();
+            }catch(Exception e)
+            {
+                Debug.WriteLine(e.StackTrace);
+                Console.WriteLine("Error computing the solution.");
+            }
 
         }
     }
