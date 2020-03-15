@@ -1,4 +1,4 @@
-category_code,data_type_code,cell_value,program_code,seasonally_adj,time_slot_date,time_slot_id,time_slot_name,time,
+category_code,data_type_code,cell_value,program_code,seasonally_adj,time_slot_date,time_slot_id,time_slot_name,time
 00XX,P,399,VIP,no,2019-01-01,829,Jan2019,2019-01
 00XX,V,34010,VIP,no,2019-01-01,829,Jan2019,2019-01
 00XX,T,34409,VIP,no,2019-01-01,829,Jan2019,2019-01
